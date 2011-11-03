@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Test date:</b>
+  <%= @compatibility.test_date %>
+</p>
+
+<p>
+  <b>First product:</b>
+  <%= @compatibility.first_product_id %>
+</p>
+
+<p>
+  <b>Second product:</b>
+  <%= @compatibility.second_product_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_compatibility_path(@compatibility) %> |
+<%= link_to 'Back', compatibilities_path %>

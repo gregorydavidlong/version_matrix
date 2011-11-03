@@ -1,0 +1,31 @@
+<h1>Listing compatibilities</h1>
+
+<table>
+  <tr>
+    <th>Test date</th>
+    <th>First product</th>
+    <th>Second product</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @compatibilities.each do |compatibility| %>
+      <% 
+          first_product = Product.find(compatibility.first_product_id) 
+          second_product = Product.find(compatibility.second_product_id) 
+      %>
+  <tr>
+    <td><%= compatibility.test_date %></td>
+    <td><%= first_product.name %> <%= first_product.version %></td>
+    <td><%= second_product.name %> <%= second_product.version %></td>
+    <td><%= link_to 'Show', compatibility %></td>
+    <td><%= link_to 'Edit', edit_compatibility_path(compatibility) %></td>
+    <td><%= link_to 'Destroy', compatibility, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Compatibility', new_compatibility_path %>

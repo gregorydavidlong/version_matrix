@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  test_date: 2011-11-03
+  first_product_id: 1
+  second_product_id: 1
+
+two:
+  test_date: 2011-11-03
+  first_product_id: 1
+  second_product_id: 1
