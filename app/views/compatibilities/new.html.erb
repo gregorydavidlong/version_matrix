@@ -1,5 +1,8 @@
 <h1>New compatibility</h1>
 
+<%
+    collection_select("compatibility", "first_product_id" , @products, "id", "name") 
+%>
 <%= render 'form' %>
 
 <%= link_to 'Back', compatibilities_path %>

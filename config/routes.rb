@@ -1,4 +1,7 @@
 VersionMatrix::Application.routes.draw do
+  root :to => "pages#home"
+  get "pages/home"
+
   resources :compatibilities
 
   resources :products

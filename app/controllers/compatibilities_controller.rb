@@ -24,6 +24,7 @@ class CompatibilitiesController < ApplicationController
   # GET /compatibilities/new
   # GET /compatibilities/new.xml
   def new
+      @products = Product.all
     @compatibility = Compatibility.new
 
     respond_to do |format|
