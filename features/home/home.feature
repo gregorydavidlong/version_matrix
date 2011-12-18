@@ -17,3 +17,8 @@ Feature: A user should be presented with a home page at the root URL
         Given The user is at the home page
         When I click on the "Version Matrix" link
         Then I should see the "Version Matrix" page
+
+    Scenario: The user can navigate to the list of compatibilities from the home page
+        Given The user is at the home page
+        When I click on the "Compatibilities" link
+        Then I should see the "Compatibilities" page
