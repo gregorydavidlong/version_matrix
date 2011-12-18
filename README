@@ -5,3 +5,18 @@ The web application aims to provide a mechanism for developers, who maintain a n
 == Installation Instructions
 
 TODO
+
+
+== Running the tests
+
+There are Cucumber and Rspec test for the Version Matrix application. The general philosphy is Cucumber tests for testing use cases, and rspec tests for the controller and model.
+
+First you need to set-up the database. The following commands will get the development and test database schema set-up:
+ - rake db:migrate
+ - rake environment RAILS_ENV=test db:migrate
+
+The Cucumber tests can be run with the following command:
+ - bundle exec cucumber
+
+The rspec unit tests can be run with the following command:
+ - bundle exec rspec spec/
