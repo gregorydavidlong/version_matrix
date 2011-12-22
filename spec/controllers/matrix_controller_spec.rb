@@ -8,8 +8,18 @@ describe MatriciesController do
       response.should be_success
     end
 
+    it "should fetch the compatible versions" do
+      @product = Product.create!(:name => "Product 1")
+      @product2 = Product.create!(:name => "Product 2")
+      @compatibility = Compatibility.create!(:test_date => Date.current, :first_product_id => @product, :second_product_id => @product2)
 
-    it "should fetch the compatible versions"
+      get 'matrix'
+      assigns(:products).should include @product
+      assigns(:products).should include @product2
+      assigns(:compatibilities).should == [@compatibility]
+      
+    end
+
   end
 
 end
