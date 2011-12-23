@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107033313) do
+ActiveRecord::Schema.define(:version => 20111223110421) do
 
   create_table "compatibilities", :force => true do |t|
     t.date     "test_date"
-    t.integer  "first_product_id"
-    t.integer  "second_product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "first_version_id"
+    t.integer  "second_version_id"
   end
 
   create_table "products", :force => true do |t|
