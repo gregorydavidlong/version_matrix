@@ -1,1 +1,12 @@
 <h1>Version Matrix</h1>
+
+
+<table>
+  <tr>
+    <% @versions.each do |vx| %>
+    <td><%= vx.product.name %> <%= vx.version_string %></td>
+    <% end %>
+  </tr>
+</table>
+
+

@@ -1,6 +1,6 @@
 class MatriciesController < ApplicationController
   def matrix
-    @products = Product.all
+    @versions = Version.all
     @compatibilities = Compatibility.all
   end
 
