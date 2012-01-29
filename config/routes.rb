@@ -6,6 +6,8 @@ VersionMatrix::Application.routes.draw do
 
   resources :products
 
+  resources :versions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
