@@ -47,3 +47,9 @@ Feature: A user should be presented with a versions page
         And I should not see "Product 1 (1)"
 
     Scenario: The user is able to delete a version
+        Given There is test data in the database
+        And I am on the versions page
+        When I follow "Destroy"
+        Then I should see "Product 2 (2)"
+        And I should not see "Product 1 (1)"
+

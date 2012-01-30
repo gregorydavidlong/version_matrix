@@ -44,3 +44,8 @@ Feature: A user should be presented with a products page
         And I should not see "Product 1"
 
     Scenario: The user is able to delete a product
+        Given There is test data in the database
+        And I am on the products page
+        When I follow "Destroy"
+        Then I should see "Product 2"
+        And I should not see "Product 1"
