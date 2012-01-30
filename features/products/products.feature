@@ -27,9 +27,20 @@ Feature: A user should be presented with a products page
 	When I follow "Show"
 	Then I should see the "Product 1" page
 
+    Scenario: The user is able to view a product's details when editing
+        Given There is test data in the database
+        And I am on the products page
+        When I follow "Edit"
+        Then The "Name" field should equal "Product 1"
+
     Scenario: The user is able to edit a product
-	#Given I am on a product page
-	#When I click on the "edit" link
-	#Then I should
+        Given There is test data in the database
+        And I am on the products page
+        When I follow "Edit"
+        And I fill in the following:
+            | Name | Product A |
+        And I press "Update Product"
+        Then I should see "Product A"
+        And I should not see "Product 1"
 
     Scenario: The user is able to delete a product
