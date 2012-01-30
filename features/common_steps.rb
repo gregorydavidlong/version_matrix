@@ -27,3 +27,18 @@ Then /^The "([^\"]*)" field should( not)? equal "([^\"]*)"$/ do |field, negate, 
   expectation = negate ? :should_not : :should
   field_labeled(field).value.send(expectation) == value
 end
+
+Given /^There is test data in the database$/ do
+  @product = Product.create!(:name => "Product 1")
+  @product.save
+  @product2 = Product.create!(:name => "Product 2")
+  @product2.save
+  @version = Version.create!(:version_string => "1")
+  @version.product = @product
+  @version.save
+  @version2 = Version.create!(:version_string => "2")
+  @version2.product = @product2
+  @version2.save
+  Compatibility.create!(:test_date => Date.current, :first_version_id => @version,
+    :second_version_id => @version2)
+end

@@ -4,9 +4,7 @@ VersionMatrix::Application.routes.draw do
   get "matricies/matrix"
 
   resources :compatibilities
-
   resources :products
-
   resources :versions
 
   # The priority is based upon order of creation:

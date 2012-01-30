@@ -11,4 +11,5 @@
 
 class Version < ActiveRecord::Base
   has_many :compatibilities
+  belongs_to :product
 end

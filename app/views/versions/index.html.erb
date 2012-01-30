@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>Product</th>
-    <th>Version</th>
+    <th>Product (Version)</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +10,7 @@
 
 <% @versions.each do |version| %>
   <tr>
-    <td><%= version.product.name %></td>
-    <td><%= version.version_string %></td>
+    <td><%= version.product.name %> (<%= version.version_string %>)</td>
     <td><%= link_to 'Show', version %></td>
     <td><%= link_to 'Edit', edit_version_path(version) %></td>
     <td><%= link_to 'Destroy', version, :confirm => 'Are you sure?', :method => :delete %></td>
