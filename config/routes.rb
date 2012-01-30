@@ -1,11 +1,11 @@
 VersionMatrix::Application.routes.draw do
   root :to => "pages#home"
   get "pages/home"
-  get "matricies/default"
+  get "matricies/matrix"
 
   resources :compatibilities
-
   resources :products
+  resources :versions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

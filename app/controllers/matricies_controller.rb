@@ -1,5 +1,7 @@
 class MatriciesController < ApplicationController
-  def default
+  def matrix
+    @versions = Version.all
+    @compatibilities = Compatibility.all
   end
 
 end

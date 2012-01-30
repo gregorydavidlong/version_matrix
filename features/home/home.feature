@@ -13,6 +13,11 @@ Feature: A user should be presented with a home page at the root URL
         When I click on the "Products" link
         Then I should see the "Products" page
 
+    Scenario: The user can navigate to the list of versions from the home page
+        Given The user is at the home page
+        When I click on the "Versions" link
+        Then I should see the "Versions" page
+
     Scenario: The user can navigate to the version matrix page from the home page
         Given The user is at the home page
         When I click on the "Version Matrix" link
