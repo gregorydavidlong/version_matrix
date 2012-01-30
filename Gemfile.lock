@@ -28,6 +28,7 @@ GEM
       activemodel (= 3.0.7)
       activesupport (= 3.0.7)
     activesupport (3.0.7)
+    annotate (2.4.0)
     arel (2.0.10)
     builder (2.1.2)
     capybara (1.1.2)
@@ -37,7 +38,7 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.2.3)
+    childprocess (0.3.0)
       ffi (~> 1.0.6)
     cucumber (1.1.4)
       builder (>= 2.1.2)
@@ -49,15 +50,15 @@ GEM
       capybara (>= 1.1.2)
       cucumber (>= 1.1.3)
       nokogiri (>= 1.5.0)
-    database_cleaner (0.7.0)
+    database_cleaner (0.7.1)
     diff-lcs (1.1.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     ffi (1.0.11)
-    gherkin (2.7.1)
+    gherkin (2.7.6)
       json (>= 1.4.6)
     i18n (0.5.0)
-    json (1.6.3)
+    json (1.6.5)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -67,7 +68,7 @@ GEM
     multi_json (1.0.4)
     nokogiri (1.5.0)
     polyglot (0.3.3)
-    rack (1.2.4)
+    rack (1.2.5)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -100,18 +101,22 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     rubyzip (0.9.5)
-    selenium-webdriver (2.15.0)
-      childprocess (>= 0.2.1)
+    selenium-webdriver (2.18.0)
+      childprocess (>= 0.2.5)
       ffi (~> 1.0.9)
       multi_json (~> 1.0.4)
       rubyzip
-    sqlite3 (1.3.4)
+    sqlite3 (1.3.5)
     term-ansicolor (1.0.7)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.30)
+    tzinfo (0.3.31)
+    webrat (0.7.3)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -119,8 +124,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   cucumber-rails
   database_cleaner
   rails (= 3.0.7)
   rspec-rails (= 2.6.1)
   sqlite3
+  webrat
