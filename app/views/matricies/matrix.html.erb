@@ -3,11 +3,21 @@
 
 <table>
   <tr>
-    <td><tr>
+    <td></td>
     <% @versions.each do |vx| %>
     <td><%= vx.product.name %> (<%= vx.version_string %>)</td>
     <% end %>
   </tr>
+  <% @versions.each do |vx| %>
+  <tr>
+    <td><%= vx.product.name %> (<%= vx.version_string %>)</td>
+    <% @versions.each do |vy| %>
+    <td>
+        <!-- if compatibile then mark with an "x" -->
+    </td>
+    <% end %>
+  </tr>
+  <% end %>
 </table>
 
 
