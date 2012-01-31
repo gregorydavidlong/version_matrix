@@ -3,8 +3,8 @@
 <table>
   <tr>
     <th>Test date</th>
-    <th>First product</th>
-    <th>Second product</th>
+    <th>First product (version)</th>
+    <th>Second product (version)</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,13 +12,13 @@
 
   <% @compatibilities.each do |compatibility| %>
       <% 
-          first_product = Product.find(compatibility.first_product_id) 
-          second_product = Product.find(compatibility.second_product_id) 
+          first_version = Version.find(compatibility.first_version_id) 
+          second_version = Version.find(compatibility.second_version_id) 
       %>
   <tr>
     <td><%= compatibility.test_date %></td>
-    <td><%= first_product.name %> <%= first_product.version %></td>
-    <td><%= second_product.name %> <%= second_product.version %></td>
+    <td><%= first_version.product.name %> (<%= first_version.version_string %>)</td>
+    <td><%= second_version.product.name %> (<%= second_version.version_string %>)</td>
     <td><%= link_to 'Show', compatibility %></td>
     <td><%= link_to 'Edit', edit_compatibility_path(compatibility) %></td>
     <td><%= link_to 'Destroy', compatibility, :confirm => 'Are you sure?', :method => :delete %></td>

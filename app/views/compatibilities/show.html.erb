@@ -6,13 +6,13 @@
 </p>
 
 <p>
-  <b>First product:</b>
-  <%= @compatibility.first_product_id %>
+  <b>First product (version):</b>
+  <%= @first_version.product.name %> (<%= @first_version.version_string %>)
 </p>
 
 <p>
-  <b>Second product:</b>
-  <%= @compatibility.second_product_id %>
+  <b>Second product (version):</b>
+  <%= @second_version.product.name %> (<%= @second_version.version_string %>)
 </p>
 
 

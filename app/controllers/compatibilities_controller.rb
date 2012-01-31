@@ -14,6 +14,8 @@ class CompatibilitiesController < ApplicationController
   # GET /compatibilities/1.xml
   def show
     @compatibility = Compatibility.find(params[:id])
+    @first_version = Version.find(@compatibility.first_version_id)
+    @second_version = Version.find(@compatibility.second_version_id)
 
     respond_to do |format|
       format.html # show.html.erb

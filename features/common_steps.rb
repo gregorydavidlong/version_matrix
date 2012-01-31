@@ -39,6 +39,7 @@ Given /^There is test data in the database$/ do
   @version2 = Version.create!(:version_string => "2")
   @version2.product = @product2
   @version2.save
-  Compatibility.create!(:test_date => Date.current, :first_version_id => @version,
-    :second_version_id => @version2)
+  @compatibility = Compatibility.create!(:test_date => Date.current, :first_version_id => @version.id,
+    :second_version_id => @version2.id)
+  @compatibility.save
 end

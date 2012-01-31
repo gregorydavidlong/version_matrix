@@ -3,8 +3,9 @@
 
 <table>
   <tr>
+    <td><tr>
     <% @versions.each do |vx| %>
-    <td><%= vx.product.name %> <%= vx.version_string %></td>
+    <td><%= vx.product.name %> (<%= vx.version_string %>)</td>
     <% end %>
   </tr>
 </table>
