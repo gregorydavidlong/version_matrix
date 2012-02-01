@@ -15,6 +15,11 @@ When /^I fill in the following:$/ do |table|
   table.rows_hash.each {|field, value| fill_in field, :with => value }
 end
 
+When /^I select the following:$/ do |table|
+  # table is a Cucumber::Ast::Table
+  table.rows_hash.each {|field, value| select value, :from => field}
+end
+
 Then /^I should see "([^"]*)"$/ do |text|
     page.should have_content(text)
 end

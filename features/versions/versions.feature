@@ -19,7 +19,8 @@ Feature: A user should be presented with a versions page
 	Given I am on the version creation page
         When I fill in the following:
             | Version string | 1 |
-            | Product | 1 |
+        And I select the following:
+            | Product | Product 1 |
 	And I press "Create Version" 
 	Then I should see the "Product 1 (1)" page
 
@@ -41,7 +42,8 @@ Feature: A user should be presented with a versions page
         When I follow "Edit"
         And I fill in the following:
             | Version string | A |
-            | Product | 1 |
+        And I select the following:
+            | Product | Product 1 |
         And I press "Update Version"
         Then I should see "Product 1 (A)"
         And I should not see "Product 1 (1)"
