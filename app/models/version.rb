@@ -12,4 +12,7 @@
 class Version < ActiveRecord::Base
   has_many :compatibilities
   belongs_to :product
+
+  validates :version_string, :presence => true
+  validates :product_id, :presence => true
 end

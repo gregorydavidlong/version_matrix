@@ -14,6 +14,9 @@
     <% @versions.each do |vy| %>
     <td>
         <!-- if compatibile then mark with an "x" -->
+        <% if isCompatible(vx, vy) %>
+        x
+        <% end %>
     </td>
     <% end %>
   </tr>
