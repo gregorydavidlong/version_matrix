@@ -1,7 +1,7 @@
 <h1>Version Matrix</h1>
 
 
-<table>
+<table class="version_matrix">
   <tr>
     <td></td>
     <% @versions.each do |vx| %>
@@ -9,13 +9,15 @@
     <% end %>
   </tr>
   <% @versions.each do |vx| %>
-  <tr>
-    <td><%= vx.product.name %> (<%= vx.version_string %>)</td>
+  <tr class="version_matrix">
+    <td class="version_matrix"><%= vx.product.name %> (<%= vx.version_string %>)</td>
     <% @versions.each do |vy| %>
-    <td>
+    
         <!-- if compatibile then mark with an "x" -->
         <% if isCompatible(vx, vy) %>
-        x
+        <td class="version_compatible">
+        <% else %>
+        <td class="version_incompatible">
         <% end %>
     </td>
     <% end %>
