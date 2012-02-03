@@ -17,11 +17,13 @@
   </div>
   <div class="field">
     <%= f.label :first_version_id %><br />
-    <%= f.text_field :first_version_id %>
+    <% versions_array = Version.all.map { |version| [version.product.name + " (" + version.version_string + ")", version.id] } %>
+    <%= f.select(:first_version_id, options_for_select(versions_array, @compatibility.first_version_id)) %>
   </div>
   <div class="field">
     <%= f.label :second_version_id %><br />
-    <%= f.text_field :second_version_id %>
+    <% versions_array = Version.all.map { |version| [version.product.name + " (" + version.version_string + ")", version.id] } %>
+    <%= f.select(:second_version_id, options_for_select(versions_array, @compatibility.second_version_id)) %>
   </div>
   <div class="actions">
     <%= f.submit %>

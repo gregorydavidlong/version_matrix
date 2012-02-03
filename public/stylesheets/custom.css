@@ -49,7 +49,7 @@ tbody tr:nth-child(even) td.version_incompatible, tbody tr.even td.version_incom
 }
 
 td.version_compatible {
-  background: #66CC66;
+  background: green;
 }
 
 td.version_incompatible {

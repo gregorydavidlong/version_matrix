@@ -32,10 +32,13 @@ Feature: A user should be able to identify product versions as compatibile
         Given There is test data in the database
         When I visit the compatibilities page
         And I follow "New Compatibility"
-        When I fill in the following:
-            #| compatibility_test_date | 2011-01-01 |
-            | First version | 1 |
-            | Second version | 2 |
+        #When I fill in the following:
+        #    #| compatibility_test_date | 2011-01-01 |
+        #    | First version | 1 |
+        #    | Second version | 2 |
+        When I select the following:
+            | First version | Product 1 (1) |
+            | Second version | Product 2 (2) |
 	And I press "Create Compatibility" 
 	Then I should see "Product 1 (1)"
         And I should see "Product 2 (2)"
