@@ -14,9 +14,6 @@
 <body>
     <div class="container">
         <header>
-            <div class="site_title">
-            Version Matrix
-            </div>
             <nav class="round">
             <ul>
                 <li><%= link_to "Version Matrix", :controller => "matricies", :action => "matrix" %></li>
@@ -26,9 +23,11 @@
             </ul>
             </nav>
         </header>
-        <section>
-            <%= yield %>
-        </section>
+        <div class="maincontainer">
+            <div class="mainbox">
+                <%= yield %>
+            </div>
+        <div>
     </div>
 </body>
 </html>

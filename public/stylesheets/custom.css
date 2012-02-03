@@ -6,6 +6,10 @@ body {
   background: #cff;
 }
 
+nav {
+    float:right;
+}
+
 header {
   padding-top: 20px;
 }
@@ -70,4 +74,36 @@ a:hover {
 
 a:visited {
   color: #069;
+}
+
+.maincontainer {
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70em;
+    display:table;
+}
+
+.mainbox {
+    /* width: 50em; */
+    /* height: 30em; */
+    background: white;
+   padding: 5px; 
+}
+
+.lowercontainer {
+}
+
+.leftbox {
+    width: 25em;
+    height: 20em;
+    background: green;
+    float: left;
+}
+
+.rightbox {
+    width: 25em;
+    height: 20em;
+    background: yellow;
+    float: right;
 }
